@@ -1,4 +1,6 @@
 
+#crosswalk file originally found here: https://congressdata.joshuamccrain.com/messy_data.html#51_bioguide_id
+
 from hashlib import new
 import pandas as pd
 import csv
