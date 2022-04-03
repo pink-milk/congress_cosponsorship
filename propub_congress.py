@@ -1,5 +1,3 @@
-#KEY: HQmYOCkX2zUhgJUFyMXxSydqAtNcQ5y4WDcDi54b 
-#X-API-Key: "HQmYOCkX2zUhgJUFyMXxSydqAtNcQ5y4WDcDi54b"
 
 from csv import writer
 import time
