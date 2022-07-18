@@ -8,6 +8,6 @@ propub_congress.py is the main script. instuctions to use are commented within c
 
 bioguide_icpsr_crosswalk.csv is from Josh McCrain [https://congressdata.joshuamccrain.com/messy_data.html] 
 and is referenced in 
-bioguide_to_icpsr.py, to add additional ICPSR column to propublica data (propublica only uses bioguide IDs)
+bioguide_to_icpsr.py, to add additional ICPSR sponsor and cosponsor column to propublica data (propublica only uses bioguide IDs)
 
 This script will take about an hour (or more!) to run through each congress - there's a lot of data, and ProPublica requires a timeout between each call.
