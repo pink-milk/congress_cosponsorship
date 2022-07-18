@@ -9,7 +9,7 @@ import requests
 # get bill ids, put in list 
 
 headers = {
-    'X-API-Key': 'HQmYOCkX2zUhgJUFyMXxSydqAtNcQ5y4WDcDi54b',
+    'X-API-Key': 'your-api-key-here',
 }
 
 
