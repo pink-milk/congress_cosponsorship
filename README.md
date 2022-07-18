@@ -1,5 +1,5 @@
 # congress_cosponsorship
-script to get member cosponsorship data for all bills in X congress using propublica congress API. 
+script to get member cosponsorship data for all bills in X congress using propublica congress API. [https://projects.propublica.org/api-docs/congress-api/]
 additional script to reference bioguide IDs and translate them to ICPSR IDs
 
 It is necessary to get an API key from ProPublica's website before using these scripts [https://www.propublica.org/datastore/api/propublica-congress-api]
