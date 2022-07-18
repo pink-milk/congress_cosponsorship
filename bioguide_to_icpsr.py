@@ -9,7 +9,7 @@ import csv
 congress=115
 
 #what file are you grabbing propub cosponsorship data from
-cospon_df= pd.read_csv('cosponsors_15.csv')
+cospon_df= pd.read_csv('cosponsors_115.csv')
 
 #create a dictionary using crosswalk
 bio_dict={}
@@ -26,7 +26,7 @@ cosponsors=cospon_df['cosponsor_bioguide_id']
 # print(cosponsors)
 
 new_col=[]
-#iterate through propub bioguide IDs and find ICPSR IDs from the crosswalk dictionary
+#iterate through propub cosponsor bioguide IDs and find ICPSR IDs from the crosswalk dictionary
 for bioid in cosponsors.iteritems():
     icpsr=bio_dict.get(bioid[1])
     # print(icpsr)
@@ -40,6 +40,35 @@ for bioid in cosponsors.iteritems():
 #append new column to propublica data
 cospon_df=cospon_df.assign(cosponsor_icpsr=new_col)
 
+
+#-----------Same process for sponsor bioguide IDs---------------------------------------------------------------------------
+
+#create seperate df w just bioguide ids from propub data
+sponsors=cospon_df['sponsor_bioguide_id']
+
+# print(cosponsors)
+
+new_col2=[]
+#iterate through propub cosponsor bioguide IDs and find ICPSR IDs from the crosswalk dictionary
+for bioid in sponsors.iteritems():
+    icpsr=bio_dict.get(bioid[1])
+    # print(icpsr)
+    if icpsr:
+        new_col2.append(icpsr)
+    else:
+        new_col2.append(' ')
+
+# print(new_col)
+
+#append new column to propublica data
+cospon_df=cospon_df.assign(sponsor_icpsr=new_col2)
+
+
+
+
+
+
+
 #create and export to 116_icpsr.csv file
-cospon_df.to_csv('116_icpsr.csv')
+cospon_df.to_csv('115_icpsr.csv')
 
