@@ -23,8 +23,8 @@ congress='115'
 # manually type in bill counts, if call for a bill that doesn't exist, error message will occur
 # could possibly create a try catch to prevent hard code
 hr_count=50
-hjres_count=0
-hconres_count=0
+hjres_count=50
+hconres_count=50
 
 #---------Find Cosponsor Data for Hr-----------------------------------------------------------------------------------------------------------
 # loop through bills 1 to hr_count
